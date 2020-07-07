@@ -8,19 +8,19 @@ class ReadData:
             "均价": "", "楼层": "", "装修": "", "建造时间": "", "区域": "", "挂牌时间": "", "url": ""}
 
     number = 1
-    path = "./2020年上海三零卫士月度决算表-成都6 - 定稿.xlsx"
+    path = "./定稿.xlsx"
 
     # wb = openpyxl.Workbook()
     # sheet = wb.active
     # sheet.title = '成都合同明细'
 
     def __init__(self, tile_array):
-        workbook1 = load_workbook('2020年上海三零卫士月度决算表-成都6 - 定稿.xlsx')
-        sheet = workbook1['成都合同明细']
+        workbook1 = load_workbook('2020年.xlsx')
+        sheet = workbook1['合同明细']
 
     def _readData(self, array, sheet=None):
-        workbook1 = load_workbook('D:/StudyByDoing/fangjia_lianjia-master/excel/2020年上海三零卫士月度决算表-成都6 - 定稿.xlsx')
-        sheet = workbook1['成都合同明细']
+        workbook1 = load_workbook('D:/StudyByDoing/fangjia_lianjia-master/excel/定稿.xlsx')
+        sheet = workbook1['合同明细']
         max_row = sheet.max_row
         data = []
         for row in sheet.iter_rows(min_row=1, max_col=3, max_row=2):
